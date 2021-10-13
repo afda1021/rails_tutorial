@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3', '1.4.1' # sqlite3が本番環境に導入されないようにする(本番用)
+  # gem 'sqlite3', '1.4.1' # sqlite3が本番環境に導入されないようにする(本番用)
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
