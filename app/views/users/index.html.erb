@@ -1,4 +1,9 @@
 <h1>Users#index</h1>
-<% @users.each do |user| %>
-  <%= user.name %>
-<% end %>
+<div>
+  <% if @users.present? %>
+    <% @users.each do |user| %>
+      <p><%= user.name %></p>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to('追加', new_user_path) %>
