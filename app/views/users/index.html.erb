@@ -1,8 +1,12 @@
-<h1>Users#index</h1>
+<h1>user一覧</h1>
 <div>
   <% if @users.present? %>
     <% @users.each do |user| %>
-      <p><%= user.name %></p>
+      <p>
+        <%= user.name %>
+        <%= link_to('詳細', user_path(user)) %>
+        <%= link_to('削除', user_path(user), method: :delete, data: { confirm: '本当に削除しますか？'}) %>
+      </p>
     <% end %>
   <% end %>
 </div>
