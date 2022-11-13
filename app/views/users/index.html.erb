@@ -1,8 +1,11 @@
-<h1>Users#index</h1>
+<h1>user一覧</h1>
 <div>
   <% if @users.present? %>
     <% @users.each do |user| %>
-      <p><%= user.name %></p>
+      <p>
+        <%= user.name %>
+        <%= link_to('詳細', user_path(user)) %>
+      </p>
     <% end %>
   <% end %>
 </div>
