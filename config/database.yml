@@ -48,8 +48,13 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   <<: *default
-  database: rails_tutorial_production
-  username: rails_tutorial
-  password: <%= ENV['RAILS_TUTORIAL_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+# production:
+#   <<: *default
+#   database: rails_tutorial_production
+#   username: rails_tutorial
+#   password: <%= ENV['RAILS_TUTORIAL_DATABASE_PASSWORD'] %>
