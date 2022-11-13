@@ -14,5 +14,6 @@ module Types
       "Hello World!"
     end
     field :users, resolver: Queries::Resolvers::Users
+    field :user, resolver: Queries::Resolvers::User
   end
 end
