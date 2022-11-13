@@ -5,8 +5,6 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -32,6 +30,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'sqlite3', '1.4.1' # sqlite3が本番環境に導入されないようにする(本番用)
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use mysql as the database for Active Record
+  gem 'mysql2', '~> 0.5'
 end
 
 group :development do
@@ -62,4 +62,3 @@ gem 'dotenv-rails'
 group :production do
   gem 'pg', '1.1.4' #(本番用)
 end
-  
